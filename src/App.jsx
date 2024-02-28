@@ -14,10 +14,10 @@ function App() {
     <>
       <h1>React Contacts</h1>
 
-      <form>
-        <label>
+      <form className="form-container">
+        <label >
           First Name:
-          <input
+          <input className="form-input"
             type="text"
             onChange={(event) => {
               const value = event.target.value;
@@ -28,8 +28,9 @@ function App() {
 
         <label>
           Last Name:
-          <input
+          <input 
             type="text"
+            className="form-input"
             onChange={(event) => {
               const value = event.target.value;
               setLastName(value);
@@ -55,6 +56,7 @@ function App() {
               /\d/,
             ]}
             guide={true}
+            className="form-input"
             onChange={(event) => {
               const value = event.target.value;
               setPhoneNumber(value);
@@ -66,6 +68,7 @@ function App() {
           Email Address:{" "}
           <input
             type="email"
+            className="form-input"
             pattern=".+@example\.com"
             onChange={(event) => {
               const value = event.target.value;
@@ -73,7 +76,7 @@ function App() {
             }}
           ></input>
         </label>
-        <button
+        <button className="form-button"
           type="submit"
           onClick={(event) => {
             event.preventDefault();
