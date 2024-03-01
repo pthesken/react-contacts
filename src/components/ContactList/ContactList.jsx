@@ -10,7 +10,7 @@ export default function ContactList({ contacts }) {
             <ContactCard
               key={contact.phoneNumber}
               name={`${contact.firstName} ${contact.lastName}`}
-              number={`${contact.phoneNumber}`}
+              phone={`${contact.phoneNumber}`}
               email={`${contact.email}`}
             />
           );
